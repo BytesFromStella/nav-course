@@ -1,0 +1,52 @@
+body {
+    background-color: black;
+    color: white;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+span {
+    background-color: tomato;
+}
+
+p {
+    background-color: blue;
+}
+
+ol {
+    display: flex;
+    flex-direction: row;
+    size: 100%;
+    list-style-type: none;
+}
+
+li {
+    width: 20%;
+}
+
+img {
+    width: 100%;
+}
+
+.pStyle {
+    background-color: violet;
+    color: white;
+    border: 3px 3px dotted;
+}
+
+
+
+#container {
+    background-color: darkslategrey;
+    width: 50%;
+    border: 5px dotted blue;
+}
+
+#bStyle {
+    background-color: cadetblue;
+}
