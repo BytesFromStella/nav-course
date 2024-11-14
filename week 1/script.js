@@ -15,31 +15,33 @@ function alertButton() {
 
 function resizeTarget(targetObject, targetProperty, resizeInt) { // Reusable pointer to CSS code for body WIDTH, acting as a resizer
     const container = document.getElementById(`${targetObject}`)
+    if (!container) {
+        console.error(`The name ${targetProperty} either doesn't exist or is spelled incorrectly`)
+        return;
+    }
+
     try {
-        parseInt(resizeInt);
-        toString(targetProperty);
-        toString(targetObject);
+        resizeInt = parseInt(resizeInt);
+        container.style[targetProperty] = resizeInt.toString()+"%" 
     }
+
     catch(e) {
-        console.error("This isn't a number, or something broke. Try again.")
-    }
-    while (Number.isInteger(resizeInt)) {
-        container.targetProperty = toString(resizeInt)+"%" // Parsing as int to prevent invalid strings/properties.
+        console.error("This isn't a number. Try again.")
+        return;
     }
 }
-
 
 function defaultSize() {
     resizeTarget("container", "width", 50);
 }
-document.getElementById("sizeResetButton").addEventListener("click", defaultSize());
+document.getElementById("sizeResetButton").addEventListener("click", defaultSize);
 
 function sizeUp() {
     resizeTarget("container", "width", 80)
 }
-document.getElementById("sizeUpButton").addEventListener("click", sizeUpButton());
+document.getElementById("sizeUpButton").addEventListener("click", sizeUp);
 
 function sizeDown() {
     resizeTarget("container", "width", 30)
 }
-document.getElementById("sizeDownButton").addEventListener("click", sizeDownButton());
+document.getElementById("sizeDownButton").addEventListener("click", sizeDown);
