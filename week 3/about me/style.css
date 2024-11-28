@@ -1,0 +1,111 @@
+/* TODO: Create a phone viewport */
+/* TODO: Create dynamic scaling based on resolution */
+
+body {
+    background-color: black;
+    color: white;
+    justify-content: center;
+    text-align: center;
+    background-image: url("ai-generated-fried-chicken-drumstick-on-transparent-background-free-png.png");
+    background-image: scroll;
+    background-size: 2%;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Defines ALL the areas at once */
+header, nav, article, main, footer {
+    border-style: groove;
+    border-width: 1px;
+    margin: 1.5%;
+    padding: 1.5%;
+}
+
+header {
+    grid-area: header;
+}
+
+
+nav {
+    grid-area: nav;
+    display: flex;
+    flex-direction: row;
+    font-size: large;
+    size: 100%;
+    list-style-type: none;
+    justify-content: space-around;
+}
+
+article {
+    grid-area: article;
+    margin-right: 3.5%;
+}
+
+main {
+    grid-area: main;
+    margin-left: 3.5%;
+}
+
+footer {
+    grid-area: footer;
+}
+
+span {
+    background-color: tomato;
+}
+
+img {
+    width: 100%;
+}
+
+figcaption {
+    font-style: italic;
+}
+
+.paragraphStyle {
+    background-color: violet;
+    color: white;
+    border: 3px 3px dotted;
+}
+
+.circles {
+    width: 75px;
+    height: 75px;
+    margin: auto; /* Centres the circles. */
+    border-radius: 50%;
+    border-width: 2px;
+    border-style: solid;
+    background-color: black;
+}
+
+
+
+#container {
+    display: grid;
+    grid-template-areas:
+    "header header header header header"
+    "nav nav nav nav nav"
+    "article article main main main"
+    "footer footer footer footer footer";
+    align-items: center;
+    background-color: darkslategrey;
+    width: 75%;
+    /* Remember margins if you want to centre items, as not declaring it can lead to unexpected behavior.  
+         "Auto" means it spaces all sides automatically */
+    margin: 0 auto;
+    border: 5px dotted blue;
+}   
+
+#buttonStyle {
+    background-color: cadetblue;
+}
+
+#colorSwap {
+    color: tomato;
+    text-decoration: underline;
+}
+
+#colorSwap:hover {
+    cursor: pointer;
+}
