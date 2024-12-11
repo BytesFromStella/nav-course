@@ -66,3 +66,8 @@ function lightLoop() {
 
 let startButton = document.getElementById("startLightCycle"); startButton.addEventListener("click", (event) => {cycleCheck = true; lightLoop();});
 let stopButton = document.getElementById("stopLightCycle"); stopButton.addEventListener("click", (event) => {cycleCheck = false;});
+
+
+/* Keyboard .this */
+
+
